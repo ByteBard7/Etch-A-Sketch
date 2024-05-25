@@ -9,13 +9,6 @@ const color = document.getElementById("color");
 const clearGrid = document.getElementById("clearGrid");
 
 function createSketchBoard(gridCells) {
-  createGrid(gridCells);
-  clearGrid.addEventListener("click", () => {
-    cell.style.background = "white";
-  });
-}
-
-function createGrid(gridCells) {
   for (let i = 0; i < gridCells * gridCells; i++) {
     const cell = document.createElement("div");
     cell.style.width = `${sketchBoardSize / gridCells}px`;
