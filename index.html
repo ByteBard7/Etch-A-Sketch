@@ -16,16 +16,9 @@
   <body>
     <div class="inputs">
       <input type="color" name="color" id="color" />
-      <div class="sliderInput">
-        <input
-          type="range"
-          name="grids"
-          id="gridSlider"
-          min="1"
-          max="100"
-          step="1"
-        />
-        <p id="gridText">16 x 16</p>
+      <div class="gridInput">
+        <input type="number" id="gridSize" min="1" max="100"/>
+        <button id="createGrid">Create Grid</button>
       </div>
       <!-- <button id="clearGrid">Clear<i class="fa-solid fa-eraser"></i></button> -->
     </div>

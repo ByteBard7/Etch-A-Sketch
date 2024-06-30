@@ -3,7 +3,8 @@ const sketchBoard = document.getElementById("sketchBoard");
 sketchBoard.style.width = `${sketchBoardSize}px`;
 sketchBoard.style.height = `${sketchBoardSize}px`;
 
-const gridSlider = document.getElementById("gridSlider");
+const gridSize = document.getElementById("gridSize");
+const createGridBtn = document.getElementById("createGrid");
 const gridText = document.getElementById("gridText");
 const color = document.getElementById("color");
 const clearGrid = document.getElementById("clearGrid");
@@ -28,11 +29,14 @@ function removeGridCells() {
   }
 }
 
-gridSlider.oninput = function () {
-  const grids = this.value;
-  gridText.textContent = `${this.value} x ${this.value}`;
-  removeGridCells();
-  createSketchBoard(grids);
-};
+createGridBtn.addEventListener("click", () => {
+  const gridSizeValue = Number(gridSize.value);
+  if (gridSizeValue <= 0 || gridSizeValue > 100) {
+    alert("Please enter a value between 1 to 100");
+  } else {
+    removeGridCells();
+    createSketchBoard(gridSize.value);
+  }
+});
 
 createSketchBoard(16);

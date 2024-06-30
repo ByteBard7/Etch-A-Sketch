@@ -7,6 +7,7 @@
 body {
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: aliceblue;
@@ -24,13 +25,32 @@ body {
   border: 1px solid rgb(239, 239, 239);
 }
 
-.sliderInput {
+.gridInput {
   text-align: center;
+}
+
+.gridInput input {
+  width: 150px;
+}
+
+.gridInput button,
+.gridInput input {
+  padding: 5px;
+  border: none;
+  border-radius: 10px;
+  background-color: gray;
+}
+
+.gridInput button {
+  font-weight: bold;
+}
+
+.gridInput button::hover {
+  border: 1px solid white;
 }
 
 .inputs {
   display: flex;
-  flex-direction: column;
   gap: 20px;
   align-items: center;
   margin: 10px;
